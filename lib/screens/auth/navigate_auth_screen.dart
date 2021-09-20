@@ -1,3 +1,6 @@
+import 'package:coaching_app/screens/auth/login.dart';
+import 'package:coaching_app/screens/auth/sign_up.dart';
+import 'package:coaching_app/utilities/universal_variables.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
 

@@ -28,9 +28,10 @@ dependencies:
   cloud_firestore:
   firebase_auth:
   wave:
+  fluttertoast:
+  provider:
   introduction_screen:
   flutter_gradient_colors:
-  flutter_toast:
   google_fonts:
   font_awesome_flutter:
   glassmorphism_ui:

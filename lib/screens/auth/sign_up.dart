@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:coaching_app/consts/colors.dart';
 import 'package:coaching_app/services/global_method.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';

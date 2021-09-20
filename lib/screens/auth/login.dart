@@ -1,7 +1,6 @@
-import 'package:beloved_care/consts/colors.dart';
-import 'package:beloved_care/main_screen.dart';
-import 'package:beloved_care/screens/auth/forget_password.dart';
-import 'package:beloved_care/services/global_method.dart';
+import 'package:coaching_app/consts/colors.dart';
+import 'package:coaching_app/screens/auth/forget_password.dart';
+import 'package:coaching_app/services/global_method.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:wave/config.dart';
