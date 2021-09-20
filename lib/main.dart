@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
         navigatorObservers: [BotToastNavigatorObserver()],
         theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          primaryColor: Colors.blue,
+          primaryColor: Color(0xFF07A8B2),
           accentColor: Colors.blue,
           // scaffoldBackgroundColor: Colors.transparent,
           appBarTheme: AppBarTheme(color: Color(0xff96B7BF)),

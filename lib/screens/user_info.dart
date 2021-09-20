@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-
 import '../consts/colors.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -146,9 +145,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: userTitle(title: 'User Bag')),
+                    // Padding(
+                    //     padding: const EdgeInsets.only(left: 8.0),
+                    //     child: userTitle(title: 'User Bag')),
                     Divider(
                       thickness: 1,
                       color: Colors.grey,
@@ -169,7 +168,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     //   trailing: Icon(Icons.chevron_right_rounded),
                     //   leading: Icon(MyAppIcons.bag),
                     // ),
-                   
+
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
                       child: userTitle(title: 'User Information'),

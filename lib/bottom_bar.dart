@@ -1,10 +1,8 @@
-
 import 'package:coaching_app/screens/meeting_screen.dart';
 import 'package:coaching_app/screens/user_info.dart';
 import 'package:flutter/material.dart';
 
 import 'consts/my_icons.dart';
-
 
 class BottomBarScreen extends StatefulWidget {
   static const routeName = '/BottomBarScreen';
@@ -53,7 +51,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
     return Scaffold(
       body: pages[_selectedPageIndex], //_pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomAppBar(
-        // color: Colors.white,
+        color: Colors.white,
         shape: CircularNotchedRectangle(),
         notchMargin: 0.01,
         clipBehavior: Clip.antiAlias,
@@ -98,22 +96,22 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           ),
         ),
       ),
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterDocked,
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: FloatingActionButton(
-          backgroundColor: Colors.purple,
-          hoverElevation: 10,
-          splashColor: Colors.grey,
-          tooltip: 'Search',
-          elevation: 4,
-          child: Icon(MyAppIcons.search),
-          onPressed: () => setState(() {
-            _selectedPageIndex = 2;
-          }),
-        ),
-      ),
+      // floatingActionButtonLocation:
+      //     FloatingActionButtonLocation.miniCenterDocked,
+      // floatingActionButton: Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: FloatingActionButton(
+      //     backgroundColor: Colors.purple,
+      //     hoverElevation: 10,
+      //     splashColor: Colors.grey,
+      //     tooltip: 'Search',
+      //     elevation: 4,
+      //     child: Icon(MyAppIcons.search),
+      //     onPressed: () => setState(() {
+      //       _selectedPageIndex = 2;
+      //     }),
+      //   ),
+      // ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:coaching_app/screens/auth/introduction_auth_screen.dart';
 import 'package:coaching_app/screens/landingPage.dart';
+import 'package:coaching_app/screens/main_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class UserState extends StatelessWidget {
           } else if (userSnapshot.connectionState == ConnectionState.active) {
             if (userSnapshot.hasData) {
               print('The user is already logged in');
-              return LandingPage();
+              return MainScreens();
               // MainScreens();
             } else {
               print('The user didn\'t login yet');
