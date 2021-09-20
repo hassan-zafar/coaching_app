@@ -1,6 +1,3 @@
-import 'package:beloved_care/consts/colors.dart';
-import 'package:beloved_care/provider/dark_theme_provider.dart';
-import 'package:beloved_care/wishlist/wishlist.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -8,9 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:list_tile_switch/list_tile_switch.dart';
 import 'package:provider/provider.dart';
 
-import 'cart/cart.dart';
+import 'consts/colors.dart';
 import 'consts/my_icons.dart';
-import 'orders/order.dart';
 
 class UserInfo extends StatefulWidget {
   @override
@@ -69,7 +65,7 @@ class _UserInfoState extends State<UserInfo> {
 
   @override
   Widget build(BuildContext context) {
-    final themeChange = Provider.of<DarkThemeProvider>(context);
+    // final themeChange = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
       body: Stack(
         children: [
@@ -160,34 +156,23 @@ class _UserInfoState extends State<UserInfo> {
                       thickness: 1,
                       color: Colors.grey,
                     ),
-                    Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => Navigator.of(context)
-                            .pushNamed(WishlistScreen.routeName),
-                        splashColor: Colors.red,
-                        child: ListTile(
-                          title: Text('Wishlist'),
-                          trailing: Icon(Icons.chevron_right_rounded),
-                          leading: Icon(MyAppIcons.wishlist),
-                        ),
-                      ),
-                    ),
-                    ListTile(
-                      onTap: () {
-                        Navigator.of(context).pushNamed(CartScreen.routeName);
-                      },
-                      title: Text('Cart'),
-                      trailing: Icon(Icons.chevron_right_rounded),
-                      leading: Icon(MyAppIcons.cart),
-                    ),
-                    ListTile(
-                      onTap: () => Navigator.of(context)
-                          .pushNamed(OrderScreen.routeName),
-                      title: Text('My Orders'),
-                      trailing: Icon(Icons.chevron_right_rounded),
-                      leading: Icon(MyAppIcons.bag),
-                    ),
+
+                    // ListTile(
+                    //   onTap: () {
+                    //     Navigator.of(context).pushNamed(CartScreen.routeName);
+                    //   },
+                    //   title: Text('Cart'),
+                    //   trailing: Icon(Icons.chevron_right_rounded),
+                    //   leading: Icon(MyAppIcons.cart),
+                    // ),
+                    // ListTile(
+                    //   onTap: () => Navigator.of(context)
+                    //       .pushNamed(OrderScreen.routeName),
+                    //   title: Text('My Orders'),
+                    //   trailing: Icon(Icons.chevron_right_rounded),
+                    //   leading: Icon(MyAppIcons.bag),
+                    // ),
+                   
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
                       child: userTitle(title: 'User Information'),
@@ -208,19 +193,6 @@ class _UserInfoState extends State<UserInfo> {
                     Divider(
                       thickness: 1,
                       color: Colors.grey,
-                    ),
-                    ListTileSwitch(
-                      value: themeChange.darkTheme,
-                      leading: Icon(FontAwesomeIcons.moon),
-                      onChanged: (value) {
-                        setState(() {
-                          themeChange.darkTheme = value;
-                        });
-                      },
-                      visualDensity: VisualDensity.comfortable,
-                      switchType: SwitchType.cupertino,
-                      switchActiveColor: Colors.indigo,
-                      title: Text('Dark theme'),
                     ),
                     Material(
                       color: Colors.transparent,

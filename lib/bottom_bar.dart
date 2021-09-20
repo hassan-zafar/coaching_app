@@ -2,6 +2,8 @@
 import 'package:coaching_app/user_info.dart';
 import 'package:flutter/material.dart';
 
+import 'consts/my_icons.dart';
+
 
 class BottomBarScreen extends StatefulWidget {
   static const routeName = '/BottomBarScreen';

@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
+import '../main_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   static const routeName = '/LoginScreen';
   @override

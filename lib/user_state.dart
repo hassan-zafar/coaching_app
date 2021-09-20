@@ -1,9 +1,6 @@
-import 'package:beloved_care/main_screen.dart';
-import 'package:beloved_care/screens/introduction_auth_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/landingPage.dart';
 
 class UserState extends StatelessWidget {
   @override

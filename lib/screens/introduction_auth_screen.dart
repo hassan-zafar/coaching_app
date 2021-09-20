@@ -1,5 +1,5 @@
-import 'package:beloved_care/screens/navigate_auth_screen.dart';
-import 'package:beloved_care/universal_variables.dart';
+import 'package:coaching_app/screens/auth/navigate_auth_screen.dart';
+import 'package:coaching_app/utilities/universal_variables.dart';
 import "package:flutter/material.dart";
 import 'package:introduction_screen/introduction_screen.dart';
 
