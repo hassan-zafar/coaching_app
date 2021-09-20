@@ -3,6 +3,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+
      <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -18,6 +20,7 @@
         </intent>
     </queries>
    <application
+        tools:replace="android:label"  
         android:label="coaching_app"
         android:icon="@mipmap/ic_launcher">
         <activity

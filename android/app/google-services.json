@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "640167748698",
+    "project_id": "coaching-app-3c851",
+    "storage_bucket": "coaching-app-3c851.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640167748698:android:cf5d7bdd69f3394ceb6463",
+        "android_client_info": {
+          "package_name": "com.hassan.coaching_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640167748698-g7eb0a5tfoktvquvivtta7d5e56m43ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuzSREtNmq_kS3mL_bS7tPrNuyCELMNYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640167748698-g7eb0a5tfoktvquvivtta7d5e56m43ph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
