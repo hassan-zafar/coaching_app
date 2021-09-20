@@ -3,7 +3,6 @@ import 'package:coaching_app/screens/landingPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-
 class UserState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

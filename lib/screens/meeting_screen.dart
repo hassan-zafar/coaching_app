@@ -1,7 +1,5 @@
 import 'package:coaching_app/utilities/universal_variables.dart';
 import "package:flutter/material.dart";
-import 'package:provider/provider.dart';
-
 import 'create_meeting_screen.dart';
 import 'join_meeting_screen.dart';
 

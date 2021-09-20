@@ -3,14 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
-import 'consts/colors.dart';
+import '../consts/colors.dart';
 
-class UserInfo extends StatefulWidget {
+class ProfilePage extends StatefulWidget {
   @override
-  _UserInfoState createState() => _UserInfoState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _UserInfoState extends State<UserInfo> {
+class _ProfilePageState extends State<ProfilePage> {
   ScrollController? _scrollController;
   var top = 0.0;
   final FirebaseAuth _auth = FirebaseAuth.instance;

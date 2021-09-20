@@ -1,8 +1,7 @@
+import 'package:coaching_app/screens/auth/navigate_auth_screen.dart';
 import 'package:coaching_app/utilities/universal_variables.dart';
 import "package:flutter/material.dart";
 import 'package:introduction_screen/introduction_screen.dart';
-
-import 'navigate_auth_screen.dart';
 
 class IntroductionAuthScreen extends StatefulWidget {
   @override
@@ -16,7 +15,7 @@ class _IntroductionAuthScreenState extends State<IntroductionAuthScreen> {
       pages: [
         PageViewModel(
           title: "Welcome",
-          body: "Welcome to Beloved Care",
+          body: "Welcome to Coaching App",
           decoration: PageDecoration(
             bodyTextStyle: ralewayStyle(20, Colors.black),
             titleTextStyle: montserratStyle(20, Colors.black),

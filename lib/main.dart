@@ -2,17 +2,20 @@ import 'dart:convert';
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:bot_toast/bot_toast.dart';
-import 'package:coaching_app/consts/theme_data.dart';
+import 'package:coaching_app/bottom_bar.dart';
+import 'package:coaching_app/screens/auth/forget_password.dart';
 import 'package:coaching_app/screens/auth/login.dart';
+import 'package:coaching_app/screens/auth/sign_up.dart';
 import 'package:coaching_app/screens/landingPage.dart';
+import 'package:coaching_app/screens/main_screen.dart';
+import 'package:coaching_app/screens/meeting_screen.dart';
+import 'package:coaching_app/user_state.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:provider/provider.dart';
-
 import 'consts/colllections.dart';
 import 'consts/constants.dart';
 import 'database/local_database.dart';
@@ -69,35 +72,32 @@ class MyApp extends StatelessWidget {
     }
 
     return GetMaterialApp(
-      title: 'TCoaching App',
-      builder: BotToastInit(),
-      navigatorObservers: [BotToastNavigatorObserver()],
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        primaryColor: Colors.blue,
-        accentColor: Colors.blue,
-        scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: AppBarTheme(color: Color(0xff96B7BF)),
-        canvasColor: Colors.transparent,
-      ),
-      home: AnimatedSplashScreen(
-        splashIconSize: 160,
-        splash: Hero(
-            tag: "logo",
-            child: Image.asset(
-              logo,
-              height: 160,
-            )),
-        animationDuration: Duration(seconds: 1),
-        centered: true,
-        backgroundColor: Colors.white,
-        //Color(0xff387A53),
+        title: 'Coaching App',
+        builder: BotToastInit(),
+        navigatorObservers: [BotToastNavigatorObserver()],
+        theme: ThemeData(
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          primaryColor: Colors.blue,
+          accentColor: Colors.blue,
+          // scaffoldBackgroundColor: Colors.transparent,
+          appBarTheme: AppBarTheme(color: Color(0xff96B7BF)),
+          canvasColor: Colors.white,
+        ),
+        routes: {
+          // '/': (ctx) => LandingPage(),
+          // WebhookPaymentScreen.routeName: (ctx) =>
+          //     WebhookPaymentScreen(),
+          LandingPage.routeName: (ctx) => LandingPage(),
 
-        nextScreen: currentUser != null ? LandingPage() : LoginScreen(),
-        duration: 1,
-        splashTransition: SplashTransition.fadeTransition,
-      ),
-      // ),
-    );
+          MainScreens.routeName: (ctx) => MainScreens(),
+          LoginScreen.routeName: (ctx) => LoginScreen(),
+          SignUpScreen.routeName: (ctx) => SignUpScreen(),
+          MeetingScreen.routeName: (ctx) => MeetingScreen(),
+          BottomBarScreen.routeName: (ctx) => BottomBarScreen(),
+          ForgetPassword.routeName: (ctx) => ForgetPassword(),
+        },
+        home: UserState()
+        // ),
+        );
   }
 }

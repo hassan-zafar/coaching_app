@@ -1,6 +1,7 @@
-
 import 'package:coaching_app/consts/colors.dart';
 import 'package:coaching_app/consts/neuomorphic.dart';
+import 'package:coaching_app/screens/user_info.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -56,13 +57,11 @@ class _LandingPageState extends State<LandingPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        _launchInBrowser(
-                            "https://belovedcare.com.au/shop/ols/products");
-                      });
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ProfilePage()));
                     },
                     child: EditedNeuomprphicContainer(
-                      text: "Enter MatketPlace",
+                      text: "Check Profile",
                     ),
                   ),
                 ],
