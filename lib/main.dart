@@ -1,10 +1,22 @@
+import 'dart:convert';
+
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:coaching_app/consts/theme_data.dart';
+import 'package:coaching_app/screens/auth/login.dart';
+import 'package:coaching_app/screens/landingPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
+
+import 'consts/colllections.dart';
+import 'consts/constants.dart';
+import 'database/local_database.dart';
+import 'models/users.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
   "high_importance_channel",
@@ -53,15 +65,13 @@ class MyApp extends StatelessWidget {
         currentuserString != "" &&
         currentuserString != "USERMODELSTRING") {
       currentUser = AppUserModel.fromMap(json.decode(currentuserString));
-        isAdmin = UserLocalData().getIsAdmin();
-    isTeacher = currentUser!.isTeacher;
+      isAdmin = UserLocalData().getIsAdmin();
     }
 
-
     return GetMaterialApp(
-      title: 'TLC International',
-      // builder: BotToastInit(),
-      // navigatorObservers: [BotToastNavigatorObserver()],
+      title: 'TCoaching App',
+      builder: BotToastInit(),
+      navigatorObservers: [BotToastNavigatorObserver()],
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         primaryColor: Colors.blue,
@@ -83,7 +93,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         //Color(0xff387A53),
 
-        nextScreen: currentUser != null ? LandingPage() : LoginPage(),
+        nextScreen: currentUser != null ? LandingPage() : LoginScreen(),
         duration: 1,
         splashTransition: SplashTransition.fadeTransition,
       ),

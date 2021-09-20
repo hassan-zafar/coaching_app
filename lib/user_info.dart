@@ -1,12 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:list_tile_switch/list_tile_switch.dart';
-import 'package:provider/provider.dart';
+
 
 import 'consts/colors.dart';
-import 'consts/my_icons.dart';
 
 class UserInfo extends StatefulWidget {
   @override

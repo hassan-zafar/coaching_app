@@ -82,15 +82,15 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
                   // title: Text('Home'),
                   label: 'Home',
                 ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.room_service), label: 'Services'),
-                BottomNavigationBarItem(
-                    activeIcon: null, icon: Icon(null), label: 'Search'),
-                BottomNavigationBarItem(
-                    icon: Icon(
-                      MyAppIcons.bag,
-                    ),
-                    label: 'Cart'),
+                // BottomNavigationBarItem(
+                //     icon: Icon(Icons.room_service), label: 'Services'),
+                // BottomNavigationBarItem(
+                //     activeIcon: null, icon: Icon(null), label: 'Search'),
+                // BottomNavigationBarItem(
+                //     icon: Icon(
+                //       MyAppIcons.bag,
+                //     ),
+                //     label: 'Cart'),
                 BottomNavigationBarItem(
                     icon: Icon(MyAppIcons.user), label: 'User'),
               ],
