@@ -60,8 +60,8 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       title: 'TLC International',
-      builder: BotToastInit(),
-      navigatorObservers: [BotToastNavigatorObserver()],
+      // builder: BotToastInit(),
+      // navigatorObservers: [BotToastNavigatorObserver()],
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         primaryColor: Colors.blue,

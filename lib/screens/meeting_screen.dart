@@ -1,5 +1,9 @@
+import 'package:coaching_app/utilities/universal_variables.dart';
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
+
+import 'create_meeting_screen.dart';
+import 'join_meeting_screen.dart';
 
 class MeetingScreen extends StatefulWidget {
   static const routeName = '/MeetingScreen';
@@ -37,14 +41,10 @@ class _MeetingScreenState extends State<MeetingScreen>
 
   @override
   Widget build(BuildContext context) {
-    final productsData = Provider.of<Products>(context);
-    productsData.fetchProducts();
-
-    final popularItems = productsData.popularProducts;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Beloved Care",
+          "Coaching App",
           style: ralewayStyle(20, Colors.white),
         ),
         centerTitle: true,
